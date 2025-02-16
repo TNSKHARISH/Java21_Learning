@@ -34,8 +34,12 @@ It’s not possible to use var without an initializer (e.g., var x; would result
 It can sometimes make the code harder to understand if the variable type is not obvious from the context.
 
 Note 1 : We can seperate digits with _ to increase readability.
+
 Note 2 : When an Integer overflows , it rolls to the minimum value and starts counting up. 
 
+Note 3 : From Java 9 new Integer(24) is deprecated instead you can use Integer.valueOf(24)
+
+Note 4 : Integerpool from -128 to 127 (if you are not creating new objects same reference is allocated)
 
 BIG DECIMAL : 
 ---------------
@@ -49,3 +53,4 @@ Immutability:BigDecimal objects are immutable, meaning that any operation on a B
 Precision: It provides arbitrary precision, which allows for representing numbers with a very large number of digits.
 
 Rounding Modes: BigDecimal supports various rounding modes like ROUND_HALF_UP, ROUND_HALF_DOWN, etc.
+

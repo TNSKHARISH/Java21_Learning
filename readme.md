@@ -34,8 +34,12 @@ It’s not possible to use var without an initializer (e.g., var x; would result
 It can sometimes make the code harder to understand if the variable type is not obvious from the context.
 
 Note 1 : We can seperate digits with _ to increase readability.
+
 Note 2 : When an Integer overflows , it rolls to the minimum value and starts counting up. 
 
+Note 3 : From Java 9 new Integer(24) is deprecated instead you can use Integer.valueOf(24)
+
+Note 4 : Integerpool from -128 to 127 (if you are not creating new objects same reference is allocated)
 
 BIG DECIMAL : 
 ---------------
@@ -49,3 +53,33 @@ Immutability:BigDecimal objects are immutable, meaning that any operation on a B
 Precision: It provides arbitrary precision, which allows for representing numbers with a very large number of digits.
 
 Rounding Modes: BigDecimal supports various rounding modes like ROUND_HALF_UP, ROUND_HALF_DOWN, etc.
+
+TRIM AND STRIP : 
+------------------
+1. trim() Method
+   Definition: The trim() method removes leading and trailing spaces (characters with ASCII values 32) from a string.
+
+Whitespace Considered: Only space characters (ASCII code 32) are considered as whitespace. It does not remove other Unicode whitespace characters (e.g., tabs, newlines, etc.).
+
+Behavior: If the string only consists of whitespace characters, it will return an empty string. Otherwise, it returns a new string with the leading and trailing spaces removed.
+
+2. strip() Method
+   Definition: The strip() method was introduced in Java 11 and removes leading and trailing whitespace using the Unicode standard for whitespace (i.e., it removes all characters classified as whitespace by Unicode).
+
+Whitespace Considered: strip() removes all Unicode whitespace characters, which includes characters like tabs, newlines, and other non-visible characters that are not considered by trim().
+
+Behavior: Similar to trim(), it returns a new string with the leading and trailing whitespace removed. It can handle more types of whitespace beyond just ASCII space.
+
+Key Differences:
+
+Whitespace Type:
+trim() only removes ASCII space (character with value 32).
+strip() removes all Unicode whitespace characters, including spaces, tabs, newlines, and other whitespace defined by the Unicode standard.
+
+Compatibility:
+trim() has been available since the early versions of Java (Java 1.0).
+strip() was introduced in Java 11 and is available only in newer Java versions.
+
+Performance:
+strip() uses a more generalized method (Unicode) for whitespace removal, so it may involve a bit more overhead than trim(), but for most use cases, the difference is negligible.
+
