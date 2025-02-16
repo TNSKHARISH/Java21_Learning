@@ -83,3 +83,13 @@ strip() was introduced in Java 11 and is available only in newer Java versions.
 Performance:
 strip() uses a more generalized method (Unicode) for whitespace removal, so it may involve a bit more overhead than trim(), but for most use cases, the difference is negligible.
 
+Intern() : 
+------------
+
+In Java, the intern() method is used to optimize memory usage by ensuring that only one copy of a string with the same value exists in the string pool. This method is a part of the String class.
+
+Key Points:
+The string pool (also known as the string literal pool) is a special memory region in Java where strings are stored. This helps in reusing strings with the same content instead of creating new objects, which can save memory.
+When a string is interned, it checks if an identical string already exists in the string pool. If it does, the method returns the reference to the already existing string; otherwise, it adds the string to the pool and returns a reference to it.
+
+

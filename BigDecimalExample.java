@@ -1,7 +1,7 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class BidDecimalExample {
+public class BigDecimalExample {
     public static void main(String[] args) {
         int i = 20;
         System.out.println(i / 3);				// 6
