@@ -1,4 +1,4 @@
-package javapractice;
+package javapractice.operations;
 
 public class MathExample {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package javapractice;
+package javapractice.operations;
 
 import java.util.Arrays;
 
